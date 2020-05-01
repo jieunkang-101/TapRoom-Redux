@@ -15,19 +15,20 @@ function TapControl(props) {
     const action = a.selectTap(currentTap.id);
     dispatch(action);
   }
-
+  console.log("id", props.masterTapMenu[props.selectedTap.selectedTapId]);
 
   return (
     <>
     <TapMenu tapMenu = { props.masterTapMenu } onTabClick = { handleTapSelection } />
-    <TapDetail tap = { props.selectedTap } />
+    <TapDetail tap = { props.masterTapMenu[props.selectedTap.selectedTapId] } />
     <NewTapForm />
     </>
   )
 }
 
 TapControl.propTypes = {
-  masterTapMenu: PropTypes.object
+  masterTapMenu: PropTypes.object,
+  selectedTap: PropTypes.object
 }
 
 const mapStateToProps = (state) => {

@@ -14,7 +14,7 @@ describe('selecteTapReducer', () => {
       id: 1
     };
     expect(selecteTapReducer({}, action)).toEqual({
-      selectedTap: 1
+      selectedTapId: 1
     })
   });
 });

@@ -3,8 +3,6 @@ import PropTypes from "prop-types"
 
 function TapDetail(props){
 
-  // const { tap } = props;
-
   return (
     <>
       <div className="card detail-card">
@@ -33,7 +31,7 @@ function TapDetail(props){
 }  
 
 TapDetail.propTypes= {
-  tab: PropTypes.object,
+  tap: PropTypes.object,
   onRestockTap: PropTypes.func,
   onEditTap: PropTypes.func,
   onDeleteTap: PropTypes.func

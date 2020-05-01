@@ -82,7 +82,4 @@ describe('tapMenuReducer', () => {
         id: 2 }
     });
   });
-
-  
-
 });  
