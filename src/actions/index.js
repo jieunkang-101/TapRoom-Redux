@@ -1,7 +1,9 @@
+import * as c from './ActionTypes';
+
 export const addTap = (tap) => {
   const { img, name, brand, price, abv, pints, message, id }  = tap;
   return {
-    type: 'ADD_TAP',
+    type: c.ADD_TAP,
     img: img,
     name: name,
     brand: brand,
@@ -13,7 +15,7 @@ export const addTap = (tap) => {
   }
 }
 
-export const deleteTap = id => ({
-  type: 'DELETE_TAP',
+export const deleteTap = (id) => ({
+  type: c.DELETE_TAP,
   id
 });
