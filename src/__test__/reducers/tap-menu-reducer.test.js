@@ -11,7 +11,28 @@ describe('tapMenuReducer', () => {
     abv:'10',
     pints:'124',
     message:'Enough',
-    id: 1 
+    id: 1 }
+  const currentState = {
+    1: { 
+      img: 'imageURL',
+      name:'Lager',
+      brand:'A',
+      price:'10',
+      abv:'10',
+      pints:'124',
+      message:'Enough',
+      id: 1 
+    },
+    2: { 
+      img: 'imageURL',
+      name:'IPA',
+      brand:'B',
+      price:'11',
+      abv:'11',
+      pints:'124',
+      message:'Enough',
+      id: 2 
+    }
   }
 
   test('Should return default state if there is no action type passed into the reducer', () => {
@@ -31,7 +52,6 @@ describe('tapMenuReducer', () => {
       message: message,
       id: id
     };
-
     expect(tapMenuReducer({}, action)).toEqual({
       [id] : {
         img: img,
@@ -45,6 +65,24 @@ describe('tapMenuReducer', () => {
       }
     });
   });  
+
+  test('Should successfully delete a tap', () => {
+    action = {
+      type: 'DELETE_TAP',
+      id: 1
+    };
+    expect(tapMenuReducer(currentState, action)).toEqual({
+      2: { img: 'imageURL',
+        name:'IPA',
+        brand:'B',
+        price:'11',
+        abv:'11',
+        pints:'124',
+        message:'Enough',
+        id: 2 }
+    });
+  });
+
 
 
 });  

@@ -12,3 +12,8 @@ export const addTap = (tap) => {
     id: id
   }
 }
+
+export const deleteTap = id => ({
+  type: 'DELETE_TAP',
+  id
+});
