@@ -1,7 +1,7 @@
 
 
 const initialState = {
-  visibilityFilter: VisibilityFilters.SHOW_TAP_MENU,
+  // visibilityFilter: VisibilityFilters.SHOW_TAP_MENU,
   masterTapMenu:
     [{
         id: "b7c6018c-fff0-44b7-9df3-49bd798d33b2",
