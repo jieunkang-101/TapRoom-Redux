@@ -1,36 +1,37 @@
 import tapMenuReducer from '../../reducers/tap-menu-reducer';
+import * as c from '../../actions/ActionTypes';
 
 describe('tapMenuReducer', () => {
 
   let action;
   const tapData = {
     img: 'imageURL',
-    name:'Lager',
-    brand:'A',
-    price:'10',
-    abv:'10',
-    pints:'124',
-    message:'Enough',
+    name: 'Lager',
+    brand: 'A',
+    price: '10',
+    abv: '10',
+    pints: 5,
+    message: 'Almost Empty',
     id: 1 }
   const currentState = {
     1: { 
       img: 'imageURL',
-      name:'Lager',
-      brand:'A',
-      price:'10',
-      abv:'10',
-      pints:'124',
-      message:'Enough',
+      name: 'Lager',
+      brand: 'A',
+      price: '10',
+      abv: '10',
+      pints: 5,
+      message: 'Almost Empty',
       id: 1 
     },
     2: { 
       img: 'imageURL',
-      name:'IPA',
-      brand:'B',
-      price:'11',
-      abv:'11',
-      pints:'124',
-      message:'Enough',
+      name: 'IPA',
+      brand: 'B',
+      price: '11',
+      abv: '11',
+      pints: 124,
+      message: 'Enough',
       id: 2 
     }
   }
@@ -42,7 +43,7 @@ describe('tapMenuReducer', () => {
   test('Should successfully add new tap data to masterTapMenu', () => {
     const { img, name, brand, price, abv, pints, message, id } = tapData;
     action = {
-      type: 'ADD_TAP',
+      type: c.ADD_TAP,
       img: img,
       name: name,
       brand: brand,
@@ -68,18 +69,81 @@ describe('tapMenuReducer', () => {
 
   test('Should successfully delete a tap', () => {
     action = {
-      type: 'DELETE_TAP',
+      type: c.DELETE_TAP,
       id: 1
     };
     expect(tapMenuReducer(currentState, action)).toEqual({
       2: { img: 'imageURL',
-        name:'IPA',
-        brand:'B',
-        price:'11',
-        abv:'11',
-        pints:'124',
-        message:'Enough',
+        name: 'IPA',
+        brand: 'B',
+        price: '11',
+        abv: '11',
+        pints: 124,
+        message: 'Enough',
         id: 2 }
     });
   });
+
+  test('Should successfully decrease pints property of existing tap data in masterTapMenu', () => {
+    const { pints } = tapData;
+    action = {
+      type: c.SELL_PINT,
+      id: 1,
+      pints: pints
+    }
+    expect(tapMenuReducer(currentState, action)).toEqual({
+      1: { 
+        img: 'imageURL',
+        name: 'Lager',
+        brand: 'A',
+        price: '10',
+        abv: '10',
+        pints: 4,
+        message: 'Almost Empty',
+        id: 1 
+      },
+      2: { 
+        img: 'imageURL',
+        name: 'IPA',
+        brand: 'B',
+        price: '11',
+        abv: '11',
+        pints: 124,
+        message: 'Enough',
+        id: 2 
+      }
+    });
+  });  
+
+  test('Should successfully increase pints property of existing tap data in masterTapMenu', () => {
+    const { pints, message } = tapData;
+    action = {
+      type: c.RESTOCK_TAP,
+      id: 1,
+      pints: pints,
+      message: message
+    }
+    expect(tapMenuReducer(currentState, action)).toEqual({
+      1: { 
+        img: 'imageURL',
+        name: 'Lager',
+        brand: 'A',
+        price: '10',
+        abv: '10',
+        pints: 129,
+        message: 'Enough',
+        id: 1 
+      },
+      2: { 
+        img: 'imageURL',
+        name: 'IPA',
+        brand: 'B',
+        price: '11',
+        abv: '11',
+        pints: 124,
+        message: 'Enough',
+        id: 2 
+      }
+    });
+  });  
 });  

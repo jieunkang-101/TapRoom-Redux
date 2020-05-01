@@ -19,7 +19,17 @@ export default (state = {}, action) => {
     case c.DELETE_TAP:
       const newState = { ...state };
       delete newState[id];
-      return newState;      
+      return newState;  
+    case c.SELL_PINT:
+      let leftPints = pints;
+      leftPints --;
+      const soldPintState = { ...state, [id]: { ...state[id], pints: leftPints } };
+      return soldPintState;
+    case c.RESTOCK_TAP:
+      let restockTap = pints;
+      restockTap += 124;  
+      const retockedState = { ...state, [id]: { ...state[id], pints: restockTap, message: 'Enough' } };
+      return retockedState;
     default:
       return state;
     }
