@@ -23,4 +23,20 @@ export const deleteTap = (id) => ({
 export const selectTap = (id) => ({
   type: c.SELECT_TAP,
   id
-})
+});
+
+export const showTapMenu = () => ({
+  type: c.SHOW_TAP_MENU
+});
+
+export const showTapDetail = () => ({
+  type: c.SHOW_TAP_DETAIL
+});
+
+export const showNewTapForm = () => ({
+  type: c.SHOW_NEW_FORM
+});
+
+export const showEditTapForm = () => ({
+  type: c.SHOW_EDIT_FORM
+});

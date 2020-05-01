@@ -22,4 +22,35 @@ describe('tap menu actions', () => {
       id: 1
     });
   });
+
+  it('selectTap should create SELECT_TAP action', () => {
+    expect(actions.selectTap(1)).toEqual({
+      type: c.SELECT_TAP,
+      id: 1
+    })
+  });
+
+  it('showTapMenu should create SHOW_TAP_MENU action', () => {
+    expect(actions.showTapMenu()).toEqual({
+      type: c.SHOW_TAP_MENU
+    })
+  });
+
+  it('showTapDetail should create SHOW_TAP_DETAIL action', () => {
+    expect(actions.showTapDetail()).toEqual({
+      type: c.SHOW_TAP_DETAIL
+    })
+  });
+
+  it('showNewTapForm should create SHOW_NEW_FORM action', () => {
+    expect(actions.showNewTapForm()).toEqual({
+      type: c.SHOW_NEW_FORM
+    })
+  });
+
+  it('showEditTapForm should create SHOW_EDIT_FORM action', () => {
+    expect(actions.showEditTapForm()).toEqual({
+      type: c.SHOW_EDIT_FORM
+    })
+  });
 });
