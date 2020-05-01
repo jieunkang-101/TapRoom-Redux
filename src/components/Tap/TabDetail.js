@@ -3,20 +3,20 @@ import PropTypes from "prop-types"
 
 function TapDetail(props){
 
-  const { tap } = props;
+  // const { tap } = props;
 
   return (
     <>
       <div className="card detail-card">
         <h2>Tap Detail</h2>
         <ul>
-          <li>Id: {tap.id}</li>
-          <li>Brand: <strong>{tap.brand}</strong></li>
-          <li>Name: <strong>{tap.name}</strong></li>
-          <li>price: <strong>{tap.price}</strong> $</li>
-          <li>ABV: <strong>{tap.abv}</strong> % ABV</li>
-          <li>Left Pints: <strong>{tap.pints}</strong></li>
-          <li>Current Status: <strong><span className="left-pints">{tap.message}</span></strong></li>
+          <li>Id: {props.id}</li>
+          <li>Brand: <strong>{props.brand}</strong></li>
+          <li>Name: <strong>{props.name}</strong></li>
+          <li>price: <strong>{props.price}</strong> $</li>
+          <li>ABV: <strong>{props.abv}</strong> % ABV</li>
+          <li>Left Pints: <strong>{props.pints}</strong></li>
+          <li>Current Status: <strong><span className="left-pints">{props.message}</span></strong></li>
         </ul>
         <div className="card-footer">
           <div className="button-center">

@@ -22,7 +22,6 @@ function NewTapForm(props){
       id: v4()
     }
     dispatch(action);
-    // props.onNewTapCreation({brand: event.target.brand.value, name: event.target.name.value, price: event.target.price.value, abv: event.target.abv.value, img: event.target.img.value, pints: 124, message:"", id: v4()});
   }
 
   return (

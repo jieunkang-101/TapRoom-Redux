@@ -20,9 +20,6 @@ export default (state = {}, action) => {
       const newState = { ...state };
       delete newState[id];
       return newState;      
-    // case c.SELL_PINT:
-    //   let   
-
 
   default:
     return state;

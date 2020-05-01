@@ -19,3 +19,8 @@ export const deleteTap = (id) => ({
   type: c.DELETE_TAP,
   id
 });
+
+export const selectTap = (id) => ({
+  type: c.SELECT_TAP,
+  id
+})
