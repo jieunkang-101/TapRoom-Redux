@@ -2,12 +2,27 @@ import React from "react";
 import { v4 } from 'uuid';
 import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
+import { connect } from 'react-redux';
+import * as c from '../../actions/ActionTypes'
 
 function NewTapForm(props){
 
   function handleNewTapFormSubmission(event) {
+    const { dispatch } = props;
     event.preventDefault();
-    props.onNewTapCreation({brand: event.target.brand.value, name: event.target.name.value, price: event.target.price.value, abv: event.target.abv.value, img: event.target.img.value, pints: 124, message:"", id: v4()});
+    const action = {
+      type: c.ADD_TAP,
+      brand: event.target.brand.value, 
+      name: event.target.name.value, 
+      price: event.target.price.value, 
+      abv: event.target.abv.value, 
+      img: event.target.img.value, 
+      pints: 124, 
+      message:"", 
+      id: v4()
+    }
+    dispatch(action);
+    // props.onNewTapCreation({brand: event.target.brand.value, name: event.target.name.value, price: event.target.price.value, abv: event.target.abv.value, img: event.target.img.value, pints: 124, message:"", id: v4()});
   }
 
   return (
@@ -26,4 +41,4 @@ NewTapForm.propTypes = {
   onNewTapCreation: PropTypes.func
 };
 
-export default NewTapForm;
+export default connect()(NewTapForm);

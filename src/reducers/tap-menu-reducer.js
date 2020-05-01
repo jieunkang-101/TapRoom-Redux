@@ -16,10 +16,14 @@ export default (state = {}, action) => {
           id: id
         }
       });
-    case 'DELETE_TAP':
+    case c.DELETE_TAP:
       const newState = { ...state };
       delete newState[id];
-      return newState;    
+      return newState;      
+    // case c.SELL_PINT:
+    //   let   
+
+
   default:
     return state;
   }

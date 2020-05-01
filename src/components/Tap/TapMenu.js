@@ -7,7 +7,7 @@ function TapMenu(props) {
     <>
       <div className="tapMenu">
         <div className="row">
-          {props.tapMenu.map((tap) =>
+          {Object.values(props.tapMenu).map((tap) =>
             <Tap
               key={tap.id}
               id={tap.id}
@@ -29,7 +29,7 @@ function TapMenu(props) {
 }
 
 TapMenu.propTypes = {
-  tapMenu: PropTypes.array,
+  tapMenu: PropTypes.object,
   onTabClick: PropTypes.func,
   onSellPint: PropTypes.func
 }
