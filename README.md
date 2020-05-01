@@ -12,7 +12,7 @@
 ## 1. Description
 A React application where a tap room can track their kegs. This website has full CRUD funcionality to tap room. 
 * Updated to incorporate Redux.
-* _View working page at_ https://jieunkang-101.github.io/TapRoomRedux
+* _View working page at_ https://jieunkang-101.github.io/TapRoom-Redux
 
 ### :small_orange_diamond: Preview
 <img src="src/img/tap-room-screenshot.gif" width="640px" />
@@ -29,16 +29,25 @@ A React application where a tap room can track their kegs. This website has full
   * As a seller, I want to be able to delete a keg.
   * As a seller, I want to have kegs stock message to be color-coded for easy readability. This is based on the amount of pints left.
 
-### :small_orange_diamond: A Component Tree
-<img src="src/img/tap-room-diagram.jpg" alt="Application Component Tree" width= "640px" />  
+### :small_orange_diamond: Component Diagram with Wireframe : Round 1
+<img src="src/img/tap-room-diagram-1.jpg" alt="Application Component Tree" width= "640px" />  
 
+### :small_orange_diamond: Component Diagram : Round 2
+<img src="src/img/tap-room-diagram-2.jpg" alt="Application Component Tree" width= "640px" />   
+
+### Designing Components
+```
+
+```
 
 ## 2. Development
 ### :small_orange_diamond: Technologies Used:
++ [ReactJs](https://reactjs.org/) 
++ [Redux 4.0.5](https://redux.js.org/)
++ [React Redux 7.1.3](https://react-redux.js.org/)
 + [npm](https://www.npmjs.com/) 
-+ [react](https://reactjs.org/) 
 + [Webpack](https://webpack.js.org/)
-+ [bootstrap](https://getbootstrap.com/)
++ [bootstrap 4.4.1](https://getbootstrap.com/)
 
 ### :small_orange_diamond: Run this project to development server
 ```bash
