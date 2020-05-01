@@ -15,27 +15,46 @@ function TapControl(props) {
     const action = a.selectTap(currentTap.id);
     dispatch(action);
   }
-  console.log("id", props.masterTapMenu[props.selectedTap.selectedTapId]);
+
+  const handleClickingAddNewTap = () => {
+    const { dispatch } = props;
+    const action = a.showNewTapForm();
+    dispatch(action);
+  }
+
+  const setVisibility = () => {
+    if (props.displayToggle.showNewTapForm) {
+      return (
+        <NewTapForm />
+      )
+    } else if (props.displayToggle.showTapMenu) {
+      return (
+        <TapMenu tapMenu = { props.masterTapMenu } onClickAddNewTap = { handleClickingAddNewTap } onTabClick = { handleTapSelection } />
+      )
+    }   
+  }
 
   return (
     <>
-    <TapMenu tapMenu = { props.masterTapMenu } onTabClick = { handleTapSelection } />
-    <TapDetail tap = { props.masterTapMenu[props.selectedTap.selectedTapId] } />
-    <NewTapForm />
+    {setVisibility()};
+    {/* <TapDetail tap = { props.masterTapMenu[props.selectedTap.selectedTapId] } />
+    <NewTapForm /> */}
     </>
   )
 }
 
 TapControl.propTypes = {
   masterTapMenu: PropTypes.object,
-  selectedTap: PropTypes.object
+  selectedTap: PropTypes.object,
+  displayToggle: PropTypes.object
 }
 
 const mapStateToProps = (state) => {
   
   return {
     masterTapMenu: state.masterTapMenu,
-    selectedTap: state.selectedTap
+    selectedTap: state.selectedTap,
+    displayToggle: state.displayToggle
   }  
 }
 

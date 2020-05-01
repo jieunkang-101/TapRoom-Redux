@@ -161,11 +161,21 @@ import React from "react";
 import Header from "./Header";
 import Footer from './Footer';
 import TapControl from "./Tap/TapControl";
+// import PropTypes from "prop-types";
+// import * as a from '../actions';
 import '../App.css';
 
-function App(){
+function App(props){
+
+  // const handleClickingAddNewTap = () => {
+  //   const { dispatch } = props;
+  //   const action = a.showNewTapForm();
+  //   dispatch(action);
+  // }
+
   return ( 
     <React.Fragment>
+      {/* <Header onClickAddNewTap = { handleClickingAddNewTap } /> */}
       <Header />
       <TapControl />
       <Footer />

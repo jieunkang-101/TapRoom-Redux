@@ -23,7 +23,7 @@ function Header(props){
             <li className="nav-item">
               <button
                 type="button" 
-                className="link-button mr-" 
+                className="link-button mr-3" 
                 onClick={() => props.onClickAddNewTap()}>AddNewTap 
               </button>
             </li>

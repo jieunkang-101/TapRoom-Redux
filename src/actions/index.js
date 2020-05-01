@@ -20,24 +20,15 @@ export const deleteTap = (id) => ({
   id
 });
 
-export const sellPints = (id) => {
-  const { pints } = tap;
-  return {
-    type: c.SELL_PINT,
-    id,
-    pints: pints
-  }
-};
+export const sellPints = (id) => ({
+  type: c.SELL_PINT,
+  id
+});
 
-export const restockTap = (id) => {
-  const { pints, message } = tap;
-  return {
-    type: c.SELL_PINT,
-    id,
-    pints: pints,
-    message: message
-  }
-};
+export const restockTap = (id) => ({
+  type: c.RESTOCK_TAP,
+  id
+});
 
 export const selectTap = (id) => ({
   type: c.SELECT_TAP,
