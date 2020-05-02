@@ -16,12 +16,10 @@ export default (state = {}, action) => {
           id: id
         }
       });
-
     case c.DELETE_TAP:
       const newState = { ...state };
       delete newState[id];
       return newState;
-
     case c.SELL_PINT:
       const newState2 = { ...state };
       const leftPints = newState2[id].pints > 0 ? newState2[id].pints -= 1 : 0;
@@ -31,13 +29,11 @@ export default (state = {}, action) => {
       const emptyMessage = leftPints === 0 ? "Out of Stock!": newMessage;
       const finalUpdateState = { ...updateState, [id]: { ...updateState[id], message: emptyMessage } };
       return finalUpdateState;
-
     case c.RESTOCK_TAP:
       const newState3 = { ...state };
       const restockTap = newState3[id].pints += 124;  
       const retockedState = { ...newState3, [id]: { ...newState3[id], pints: restockTap, message: 'Enough' } };
       return retockedState;
-
     default:
       return state;
   }

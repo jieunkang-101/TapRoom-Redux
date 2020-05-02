@@ -65,19 +65,34 @@ function TapControl(props) {
   const setVisibility = () => {
     if (props.displayToggle.showEditTapForm) {
       return (
-        <EditTapForm onClickToHome = { handleToHome } />
+        <EditTapForm 
+          onClickToHome = { handleToHome }
+        />
       );
     } else if (props.selectedTap.selectedTapId !== null) {
       return (
-        <TapDetail tap = { props.masterTapMenu[props.selectedTap.selectedTapId] } onClickToHome = { handleToHome } onClickRestock = { handleRestockTap } onClickEdit = { handleDisplayEditForm } onClickDelete = { handleDeleteTap } />        
+        <TapDetail 
+          tap = { props.masterTapMenu[props.selectedTap.selectedTapId] } 
+          onClickToHome = { handleToHome } 
+          onClickRestock = { handleRestockTap } 
+          onClickEdit = { handleDisplayEditForm } 
+          onClickDelete = { handleDeleteTap } 
+        />        
       );
     } else if (props.displayToggle.showNewTapForm) {
       return (
-        <NewTapForm onClickToHome = { handleToHome } />
+        <NewTapForm 
+          onClickToHome = { handleToHome } 
+        />
       );
     } else if (props.displayToggle.showTapMenu) {
       return (
-        <TapMenu tapMenu = { props.masterTapMenu } onClickAddNewTap = { handleDisplayAddNewForm } onClickTapDetail = { handleTapSelection } onClickSell={ handleSellPint }  />
+        <TapMenu 
+          tapMenu = { props.masterTapMenu } 
+          onClickAddNewTap = { handleDisplayAddNewForm } 
+          onClickTapDetail = { handleTapSelection } 
+          onClickSell={ handleSellPint }  
+        />
       );
     }   
   }
