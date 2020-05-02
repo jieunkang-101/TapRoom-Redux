@@ -3,12 +3,10 @@ import * as c from './../actions/ActionTypes';
 let initailState = {
   showTapMenu: true,
   showNewTapForm: false,
-  showEditTapForm: false,
-  // selectedTapId: null
+  showEditTapForm: false
 }
 
 export default (state = initailState, action) => {
-  // const { showTapMenu, showNewTapForm, showEditTapForm } = action;
   switch (action.type) {
     case c.SHOW_TAP_MENU:
       return Object.assign({}, state, { showTapMenu: true, showNewTapForm: false, showEditTapForm: false });
