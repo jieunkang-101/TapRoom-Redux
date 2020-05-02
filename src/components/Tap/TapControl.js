@@ -65,13 +65,11 @@ function TapControl(props) {
       return (
         <EditTapForm />
       );
-    }
-    else if (props.selectedTap.selectedTapId !== null) {
+    } else if (props.selectedTap.selectedTapId !== null) {
       return (
         <TapDetail tap = { props.masterTapMenu[props.selectedTap.selectedTapId] } onClickToHome = { handleToHome } onClickRestock = { handleRestockTap } onClickEdit = { handleDisplayEditForm } onClickDelete = { handleDeleteTap } />        
       );
-    }
-    else if (props.displayToggle.showNewTapForm) {
+    } else if (props.displayToggle.showNewTapForm) {
       return (
         <NewTapForm />
       );

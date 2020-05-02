@@ -11,13 +11,15 @@ function Header(props){
         </div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <span class="navbar-brand mb-0 h1" id="taproom-brand"><strong>TapRoom</strong></span>
+        <div className="navbar-collapse collapse show" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
               <button
                 type="button" 
                 className="link-button mr-3" 
                 onClick={() => props.onClickToHome()}><strong>Menu</strong>
+                <span class="sr-only">(current)</span>
               </button>
             </li>
             <li className="nav-item">
@@ -31,8 +33,8 @@ function Header(props){
         </div>  
       </nav>
     </div>
-    <br></br>
-    <br></br>
+    <br />
+    <br />
     </>
   );
 }

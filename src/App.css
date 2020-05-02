@@ -12,6 +12,11 @@ body {
   font-size: 1.2em;
 }
 
+#taproom-brand {
+  color: rgb(47, 156, 156);
+  font-weight: bolder;
+}
+
 .navbar-btn {
   padding-right: 20px;
 }

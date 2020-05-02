@@ -26,7 +26,7 @@ function Tap(props) {
           <div className="card-footer">  
             <div className="button-center">
               <div className="btn-group" role="group" aria-label="Basic example">
-                <button onClick={() => props.whenTabClicked(props.id)} className="btn btn-outline-info">Detail</button>
+                <button onClick={() => props.whenDetailClicked(props.id)} className="btn btn-outline-info">Detail</button>
                 <button onClick = {() => props.whenSellClicked(props.id)} className="btn btn-outline-info">Sell</button>
               </div>
             </div>
@@ -46,7 +46,7 @@ Tap.propTypes = {
   pints: PropTypes.number,
   message: PropTypes.string,
   id: PropTypes.string,
-  whenTabClicked: PropTypes.func,
+  whenDetailClicked: PropTypes.func,
   whenSellClicked: PropTypes.func
 };
 
