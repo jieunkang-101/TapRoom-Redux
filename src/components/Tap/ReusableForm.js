@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 
 function ReusableForm(props) {
   return (
-    <><div className="form-card">
+    <>
+      <div className="form-card">
         <form onSubmit={props.formSubmissionHandler}>
           <div className="form-group">
             <label htmlFor="brand">Brand: </label>

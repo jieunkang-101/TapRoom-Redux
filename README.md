@@ -35,11 +35,6 @@ A React application where a tap room can track their kegs. This website has full
 ### :small_orange_diamond: Component Diagram : Round 2
 <img src="src/img/tap-room-diagram-2.jpg" alt="Application Component Tree" width= "640px" />   
 
-### Designing Components
-```
-
-```
-
 ## 2. Development
 ### :small_orange_diamond: Technologies Used:
 + [ReactJs](https://reactjs.org/) 
@@ -51,8 +46,8 @@ A React application where a tap room can track their kegs. This website has full
 
 ### :small_orange_diamond: Run this project to development server
 ```bash
-  $ git clone https://github.com/jieunkang-101/TapRoom
-  $ cd TapRoom
+  $ git clone https://github.com/jieunkang-101/TapRoom-Redux
+  $ cd TapRoom-Redux
   $ npm install  
   $ npm start
 ```

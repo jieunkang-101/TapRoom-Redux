@@ -28,7 +28,7 @@ function App(props){
       <TapControl />
       <Footer onClickToHome={ handleToHome } />
     </React.Fragment>
-  );
+  )
 }
 
 const mapStateToProps = (state) => {

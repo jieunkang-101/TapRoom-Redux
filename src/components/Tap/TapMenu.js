@@ -6,7 +6,6 @@ function TapMenu(props) {
   return (
     <>
       <div className="tapMenu">
-      <button onClick={() => props.onClickAddNewTap()} className="btn btn-outline-info">Add New Tap</button>
         <div className="row">
           {Object.values(props.tapMenu).map((tap) =>
             <Tap
