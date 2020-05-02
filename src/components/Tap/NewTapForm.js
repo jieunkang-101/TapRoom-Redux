@@ -1,6 +1,5 @@
 import React from "react";
 import { v4 } from 'uuid';
-import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
 import { connect } from 'react-redux';
 import * as c from '../../actions/ActionTypes'
@@ -38,9 +37,5 @@ function NewTapForm(props){
     </React.Fragment>
   );
 }
-
-// NewTapForm.propTypes = {
-//   onNewTapCreation: PropTypes.func
-// };
 
 export default connect()(NewTapForm);

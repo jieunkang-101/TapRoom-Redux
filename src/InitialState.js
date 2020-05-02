@@ -1,7 +1,4 @@
-// import { v4 } from 'uuid';
-
 const initialState = {
-  // visibilityFilter: VisibilityFilters.SHOW_TAP_MENU,
   masterTapMenu: {
     [1]: { 
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTr4-0GqixCFrqtZ8bEgiwkRdGYXcyNlD0TpX3PMwzJx4b9r8SS&usqp=CAU",

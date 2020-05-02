@@ -26,8 +26,7 @@ function Footer(props){
 }
 
 Footer.propTypes = {
-  onClickToHome: PropTypes.func,
-  onClickAddNewTap: PropTypes.func
+  onClickToHome: PropTypes.func
 }
 
 export default Footer;

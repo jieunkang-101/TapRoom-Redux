@@ -6,7 +6,6 @@ import TapDetail from './TabDetail';
 import { connect } from "react-redux";
 import * as a from './../../actions';
 import PropTypes from 'prop-types';
-import Tap from "./Tap";
 
 function TapControl(props) {
 
@@ -22,12 +21,6 @@ function TapControl(props) {
     const action = a.showNewTapForm();
     dispatch(action);
   }
-
-  // const handleDisplayTapMenu = () => {
-  //   const { dispatch } = props;
-  //   const action = a.showTapMenu();
-  //   dispatch(action);
-  // }
 
   const handleDisplayEditForm = () => {
     const { dispatch } = props;
@@ -63,27 +56,27 @@ function TapControl(props) {
     if (props.displayToggle.showEditTapForm) {
       return (
         <EditTapForm />
-      )
+      );
     }
     else if (props.selectedTap.selectedTapId !== null) {
       return (
         <TapDetail tap = { props.masterTapMenu[props.selectedTap.selectedTapId] } onClickRestock = { handleRestockTap } onClickEdit = { handleDisplayEditForm } onClickDelete = { handleDeleteTap } />        
-      )
+      );
     }
     else if (props.displayToggle.showNewTapForm) {
       return (
         <NewTapForm />
-      )
+      );
     } else if (props.displayToggle.showTapMenu) {
       return (
         <TapMenu tapMenu = { props.masterTapMenu } onClickAddNewTap = { handleDisplayAddNewForm } onClickTapDetail = { handleTapSelection } onClickSell={ handleSellPint }  />
-      )
+      );
     }   
   }
 
   return (
     <>
-    {setVisibility()};
+    { setVisibility() };
     </>
   )
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
 import { connect } from 'react-redux';
 import * as c from '../../actions/ActionTypes'
@@ -46,6 +45,5 @@ const mapStateToProps = (state) => {
     selectedTap: state.selectedTap
   }  
 }
-
 
 export default connect(mapStateToProps)(EditTapForm);
