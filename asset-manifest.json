@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/TapRoom-Redux/static/css/main.40284934.chunk.css",
-    "main.js": "/TapRoom-Redux/static/js/main.48f13a7f.chunk.js",
-    "main.js.map": "/TapRoom-Redux/static/js/main.48f13a7f.chunk.js.map",
+    "main.js": "/TapRoom-Redux/static/js/main.ad551b61.chunk.js",
+    "main.js.map": "/TapRoom-Redux/static/js/main.ad551b61.chunk.js.map",
     "runtime-main.js": "/TapRoom-Redux/static/js/runtime-main.cb211ec2.js",
     "runtime-main.js.map": "/TapRoom-Redux/static/js/runtime-main.cb211ec2.js.map",
     "static/js/2.c11e8e98.chunk.js": "/TapRoom-Redux/static/js/2.c11e8e98.chunk.js",
     "static/js/2.c11e8e98.chunk.js.map": "/TapRoom-Redux/static/js/2.c11e8e98.chunk.js.map",
     "index.html": "/TapRoom-Redux/index.html",
-    "precache-manifest.aa7b0713c6ed66f3dc9d18bde74d07eb.js": "/TapRoom-Redux/precache-manifest.aa7b0713c6ed66f3dc9d18bde74d07eb.js",
+    "precache-manifest.47fbf1a5b09fe2bd1fe83a257dda190d.js": "/TapRoom-Redux/precache-manifest.47fbf1a5b09fe2bd1fe83a257dda190d.js",
     "service-worker.js": "/TapRoom-Redux/service-worker.js",
     "static/css/main.40284934.chunk.css.map": "/TapRoom-Redux/static/css/main.40284934.chunk.css.map",
     "static/js/2.c11e8e98.chunk.js.LICENSE.txt": "/TapRoom-Redux/static/js/2.c11e8e98.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.cb211ec2.js",
     "static/js/2.c11e8e98.chunk.js",
     "static/css/main.40284934.chunk.css",
-    "static/js/main.48f13a7f.chunk.js"
+    "static/js/main.ad551b61.chunk.js"
   ]
 }
