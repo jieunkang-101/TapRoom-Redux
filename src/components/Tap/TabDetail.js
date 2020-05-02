@@ -19,9 +19,9 @@ function TapDetail(props){
         <div className="card-footer">
           <div className="button-center">
             <div className="btn-group" role="group" aria-label="Basic example">
-              <button onClick={() => props.onRestockTap(props.tap.id)} className="btn btn-outline-info">Restock</button>
+              <button onClick={() => props.onClickRestock(props.tap.id)} className="btn btn-outline-info">Restock</button>
               <button onClick={() => props.onClickEdit(props.tap.id)} className="btn btn-outline-info">Edit</button>
-              <button onClick={() => props.onDeleteTap(props.tap.id)} className="btn btn-outline-info">Delete</button>
+              <button onClick={() => props.onClickDelete(props.tap.id)} className="btn btn-outline-info">Delete</button>
             </div>
           </div>
         </div>
@@ -32,9 +32,9 @@ function TapDetail(props){
 
 TapDetail.propTypes= {
   tap: PropTypes.object,
-  onRestockTap: PropTypes.func,
+  onClickRestock: PropTypes.func,
   onClickEdit: PropTypes.func,
-  onDeleteTap: PropTypes.func
+  onClickDelete: PropTypes.func
 }
 
 export default TapDetail;

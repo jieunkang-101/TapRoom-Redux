@@ -15,6 +15,15 @@ export const addTap = (tap) => {
   }
 }
 
+export const selectTap = (id) => ({
+  type: c.SELECT_TAP,
+  id
+});
+
+export const unselectTap = () => ({
+  type: c.UNSELECT_TAP
+});
+
 export const deleteTap = (id) => ({
   type: c.DELETE_TAP,
   id
@@ -26,14 +35,10 @@ export const sellPint = (id, pints) => ({
   pints
 });
 
-export const restockTap = (id) => ({
+export const restockTap = (id, pints) => ({
   type: c.RESTOCK_TAP,
-  id
-});
-
-export const selectTap = (id) => ({
-  type: c.SELECT_TAP,
-  id
+  id,
+  pints
 });
 
 export const showTapMenu = () => ({
