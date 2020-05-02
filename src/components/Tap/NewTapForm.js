@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
 import { connect } from 'react-redux';
 import * as c from '../../actions/ActionTypes'
+import * as a from './../../actions';
 
 function NewTapForm(props){
 
@@ -22,6 +23,8 @@ function NewTapForm(props){
       id: v4()
     }
     dispatch(action);
+    const action2 = a.showTapMenu();
+    dispatch(action2);
   }
 
   return (
@@ -36,8 +39,8 @@ function NewTapForm(props){
   );
 }
 
-NewTapForm.propTypes = {
-  onNewTapCreation: PropTypes.func
-};
+// NewTapForm.propTypes = {
+//   onNewTapCreation: PropTypes.func
+// };
 
 export default connect()(NewTapForm);

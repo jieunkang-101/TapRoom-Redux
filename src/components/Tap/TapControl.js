@@ -6,6 +6,7 @@ import TapDetail from './TabDetail';
 import { connect } from "react-redux";
 import * as a from './../../actions';
 import PropTypes from 'prop-types';
+import Tap from "./Tap";
 
 function TapControl(props) {
 
@@ -16,20 +17,42 @@ function TapControl(props) {
     dispatch(action);
   }
 
-  const handleClickingAddNewTap = () => {
+  const handleDisplayAddNewForm = () => {
     const { dispatch } = props;
     const action = a.showNewTapForm();
     dispatch(action);
   }
 
+  // const handleDisplayTapMenu = () => {
+  //   const { dispatch } = props;
+  //   const action = a.showTapMenu();
+  //   dispatch(action);
+  // }
+
+  const handleDisplayEditForm = () => {
+    const { dispatch } = props;
+    const action = a.showEditTapForm();
+    dispatch(action);
+  }
+
   const setVisibility = () => {
-    if (props.displayToggle.showNewTapForm) {
+    if (props.displayToggle.showEditTapForm) {
+      return (
+        <EditTapForm />
+      )
+    }
+    else if (props.selectedTap.selectedTapId !== null) {
+      return (
+        <TapDetail tap = { props.masterTapMenu[props.selectedTap.selectedTapId] } onClickEdit = { handleDisplayEditForm } />        
+      )
+    }
+    else if (props.displayToggle.showNewTapForm) {
       return (
         <NewTapForm />
       )
     } else if (props.displayToggle.showTapMenu) {
       return (
-        <TapMenu tapMenu = { props.masterTapMenu } onClickAddNewTap = { handleClickingAddNewTap } onTabClick = { handleTapSelection } />
+        <TapMenu tapMenu = { props.masterTapMenu } onClickAddNewTap = { handleDisplayAddNewForm } onClickTapDetail = { handleTapSelection } />
       )
     }   
   }
@@ -37,8 +60,6 @@ function TapControl(props) {
   return (
     <>
     {setVisibility()};
-    {/* <TapDetail tap = { props.masterTapMenu[props.selectedTap.selectedTapId] } />
-    <NewTapForm /> */}
     </>
   )
 }

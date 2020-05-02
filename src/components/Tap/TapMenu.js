@@ -19,7 +19,7 @@ function TapMenu(props) {
               abv={tap.abv}
               pints={tap.pints}
               message={tap.message}
-              whenTabClicked={props.onTabClick}
+              whenTabClicked={props.onClickTapDetail}
               whenSellClicked={props.onSellPint}
             />
           )}
@@ -31,7 +31,7 @@ function TapMenu(props) {
 
 TapMenu.propTypes = {
   tapMenu: PropTypes.object,
-  onTabClick: PropTypes.func,
+  onClickTapDetail: PropTypes.func,
   onSellPint: PropTypes.func
 }
 
