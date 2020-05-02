@@ -20,9 +20,10 @@ export const deleteTap = (id) => ({
   id
 });
 
-export const sellPints = (id) => ({
+export const sellPint = (id, pints) => ({
   type: c.SELL_PINT,
-  id
+  id,
+  pints
 });
 
 export const restockTap = (id) => ({

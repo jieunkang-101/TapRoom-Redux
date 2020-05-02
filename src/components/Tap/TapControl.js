@@ -35,6 +35,13 @@ function TapControl(props) {
     dispatch(action);
   }
 
+  const handleSellPint = (id) => {
+    const currentTap = props.masterTapMenu[id];
+    const { dispatch } = props;
+    const action = a.sellPint(currentTap.id, currentTap.pints);
+    dispatch(action);
+  }
+
   const setVisibility = () => {
     if (props.displayToggle.showEditTapForm) {
       return (
@@ -52,7 +59,7 @@ function TapControl(props) {
       )
     } else if (props.displayToggle.showTapMenu) {
       return (
-        <TapMenu tapMenu = { props.masterTapMenu } onClickAddNewTap = { handleDisplayAddNewForm } onClickTapDetail = { handleTapSelection } />
+        <TapMenu tapMenu = { props.masterTapMenu } onClickAddNewTap = { handleDisplayAddNewForm } onClickTapDetail = { handleTapSelection } onClickSell={ handleSellPint }  />
       )
     }   
   }
@@ -71,7 +78,6 @@ TapControl.propTypes = {
 }
 
 const mapStateToProps = (state) => {
-  
   return {
     masterTapMenu: state.masterTapMenu,
     selectedTap: state.selectedTap,
