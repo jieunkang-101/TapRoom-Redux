@@ -23,19 +23,19 @@ export default (state = {}, action) => {
       return newState;
 
     case c.SELL_PINT:
-      let leftPints = pints;
-      leftPints = pints > 0 ? leftPints -= 1 : 0;
-      const soldPintState = { ...state, [id]: { ...state[id], pints: leftPints } };
-      let newMessage = leftPints < 10 ? "Almost Empty": "Enough";
+      const newState2 = { ...state };
+      const leftPints = newState2[id].pints > 0 ? newState2[id].pints -= 1 : 0;
+      const soldPintState = { ...newState2, [id]: { ...newState2[id], pints: leftPints } };
+      const newMessage = leftPints < 10 ? "Almost Empty": "Enough";
       const updateState = { ...soldPintState, [id]: { ...soldPintState[id], message: newMessage } };
-      let emptyMessage = leftPints === 0 ? "Out of Stock!": newMessage;
+      const emptyMessage = leftPints === 0 ? "Out of Stock!": newMessage;
       const finalUpdateState = { ...updateState, [id]: { ...updateState[id], message: emptyMessage } };
       return finalUpdateState;
 
     case c.RESTOCK_TAP:
-      let restockTap = pints;
-      restockTap += 124;  
-      const retockedState = { ...state, [id]: { ...state[id], pints: restockTap, message: 'Enough' } };
+      const newState3 = { ...state };
+      const restockTap = newState3[id].pints += 124;  
+      const retockedState = { ...newState3, [id]: { ...newState3[id], pints: restockTap, message: 'Enough' } };
       return retockedState;
 
     default:

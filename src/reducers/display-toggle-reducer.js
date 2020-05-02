@@ -1,6 +1,6 @@
 import * as c from './../actions/ActionTypes';
 
-let initailState = {
+const initailState = {
   showTapMenu: true,
   showNewTapForm: false,
   showEditTapForm: false

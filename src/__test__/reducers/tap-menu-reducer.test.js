@@ -85,7 +85,7 @@ describe('tapMenuReducer', () => {
   });
 
   test('Should successfully decrease pints property of existing tap data in masterTapMenu', () => {
-    const { pints } = tapData;
+    const { pints } = currentState;
     action = {
       type: c.SELL_PINT,
       id: 1,
@@ -116,7 +116,7 @@ describe('tapMenuReducer', () => {
   });  
 
   test('Should successfully increase pints property of existing tap data in masterTapMenu', () => {
-    const { pints, message } = tapData;
+    const { pints, message } = currentState;
     action = {
       type: c.RESTOCK_TAP,
       id: 1,
@@ -130,7 +130,7 @@ describe('tapMenuReducer', () => {
         brand: 'A',
         price: '10',
         abv: '10',
-        pints: 129,
+        pints: 128,
         message: 'Enough',
         id: 1 
       },

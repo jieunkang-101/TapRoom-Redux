@@ -1,6 +1,6 @@
 import * as c from './../actions/ActionTypes';
 
-let initialState = {
+const initialState = {
   selectedTapId: null
 };
 
