@@ -29,11 +29,14 @@ function NewTapForm(props){
   return (
     <React.Fragment>
       <div>
-      <h2>Add New Tap</h2>
-      <ReusableForm 
-        formSubmissionHandler={handleNewTapFormSubmission}
-        buttonText="Add" />
-      </div>  
+        <h2>Add New Tap</h2>
+        <div class="row justify-content-center">
+          <button onClick={() => props.onClickToHome()} className="btn btn-outline-info float-right">Cancel</button>
+        </div>
+        <ReusableForm 
+          formSubmissionHandler={handleNewTapFormSubmission}
+          buttonText="Add" />  
+      </div> 
     </React.Fragment>
   );
 }

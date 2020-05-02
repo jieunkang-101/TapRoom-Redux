@@ -8,10 +8,12 @@ import '../App.css';
 
 function App(props){
 
-  const handleClickingAddNewTap = () => {
+  const handleDisplayAddNewForm = () => {
     const { dispatch } = props;
-    const action = a.showNewTapForm();
+    const action = a.unselectTap();
     dispatch(action);
+    const action2 = a.showNewTapForm();
+    dispatch(action2);
   }
 
   const handleToHome = () => {
@@ -24,7 +26,7 @@ function App(props){
 
   return ( 
     <React.Fragment>
-      <Header onClickToHome={ handleToHome } onClickAddNewTap = { handleClickingAddNewTap } />
+      <Header onClickToHome={ handleToHome } onClickAddNewTap = { handleDisplayAddNewForm } />
       <TapControl />
       <Footer onClickToHome={ handleToHome } />
     </React.Fragment>

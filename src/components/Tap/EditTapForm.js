@@ -29,11 +29,14 @@ function EditTapForm(props){
 
   return (
     <React.Fragment>
-      <div>
-      <h2>Edit This Tap</h2>
-      <ReusableForm 
-        formSubmissionHandler={handleEditTapFormSubmission}
-        buttonText="Update" />
+      <div>    
+        <h2>Edit This Tap</h2>
+        <div class="row justify-content-center">
+          <button onClick={() => props.onClickToHome()} className="btn btn-outline-info float-right">Cancel</button>
+        </div>
+        <ReusableForm 
+          formSubmissionHandler={handleEditTapFormSubmission}
+          buttonText="Update" />
       </div>  
     </React.Fragment>
   );

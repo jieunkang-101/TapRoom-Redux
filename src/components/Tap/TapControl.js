@@ -26,8 +26,10 @@ function TapControl(props) {
 
   const handleDisplayAddNewForm = () => {
     const { dispatch } = props;
-    const action = a.showNewTapForm();
+    const action = a.unselectTap();
     dispatch(action);
+    const action2 = a.showNewTapForm();
+    dispatch(action2);
   }
 
   const handleDisplayEditForm = () => {
@@ -63,7 +65,7 @@ function TapControl(props) {
   const setVisibility = () => {
     if (props.displayToggle.showEditTapForm) {
       return (
-        <EditTapForm />
+        <EditTapForm onClickToHome = { handleToHome } />
       );
     } else if (props.selectedTap.selectedTapId !== null) {
       return (
@@ -71,7 +73,7 @@ function TapControl(props) {
       );
     } else if (props.displayToggle.showNewTapForm) {
       return (
-        <NewTapForm />
+        <NewTapForm onClickToHome = { handleToHome } />
       );
     } else if (props.displayToggle.showTapMenu) {
       return (
