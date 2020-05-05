@@ -2,7 +2,7 @@ import React from "react";
 import ReusableForm from "./ReusableForm";
 import { connect } from 'react-redux';
 import * as c from '../../actions/ActionTypes'
-import * as a from './../../actions';
+import * as a from '../../actions';
 
 function EditTapForm(props){
 

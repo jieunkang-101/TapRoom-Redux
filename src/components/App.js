@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Footer from './Footer';
-import TapControl from "./Tap/TapControl";
+import TapControl from "./tap/TapControl";
 import { connect } from "react-redux";
 import * as a from '../actions';
 import '../App.css';

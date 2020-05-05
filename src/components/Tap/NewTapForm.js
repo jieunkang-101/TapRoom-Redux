@@ -3,7 +3,7 @@ import { v4 } from 'uuid';
 import ReusableForm from "./ReusableForm";
 import { connect } from 'react-redux';
 import * as c from '../../actions/ActionTypes'
-import * as a from './../../actions';
+import * as a from '../../actions';
 
 function NewTapForm(props){
 
