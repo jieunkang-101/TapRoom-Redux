@@ -4,6 +4,7 @@ import ReusableForm from "./ReusableForm";
 import { connect } from 'react-redux';
 import * as c from '../../actions/ActionTypes'
 import * as a from '../../actions';
+import DefaultImage from '../../img/default-img.jpg'
 
 function NewTapForm(props){
 
@@ -16,7 +17,7 @@ function NewTapForm(props){
       name: event.target.name.value, 
       price: event.target.price.value, 
       abv: event.target.abv.value, 
-      img: event.target.img.value, 
+      img: (event.target.img.value) ? (event.target.img.value) : DefaultImage, 
       pints: 124, 
       message:"", 
       id: v4()

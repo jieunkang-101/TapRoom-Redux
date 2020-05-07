@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 function Tap(props) {
   return (
     <>
       <div className= "col s12 m6 l4">
         <div className="card">
           <div className="card-image">
-            <img src={props.img} height="180" alt="Brand"></img>
+            {/* {props.img} ? 
+            <img src={props.img} height="180" alt="Brand Logo"></img> :
+            <img src={DefaultImage} height="180" alt="Brand Logo" />;   */}
+            <img src={props.img} height="180" alt="Brand Logo"></img>
           </div>
           <div className="card-body">
             <ul>

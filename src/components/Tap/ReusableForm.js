@@ -8,19 +8,19 @@ function ReusableForm(props) {
         <form onSubmit={props.formSubmissionHandler}>
           <div className="form-group">
             <label htmlFor="brand">Brand: </label>
-            <input type='text' name='brand' className="form-control" />
+            <input type='text' name='brand' className="form-control" required/>
           </div>   
           <div className="form-group">
             <label htmlFor="name">Name: </label>
-            <input type='text' name='name' className="form-control" />
+            <input type='text' name='name' className="form-control" required/>
           </div>
           <div className="form-group">
             <label htmlFor="price">Price: </label>
-            <input type='text' name='price' className="form-control" />
+            <input type='text' name='price' className="form-control" required/>
           </div>
           <div className="form-group">
             <label htmlFor="abv">ABV: </label>
-            <input type='text' name='abv' className="form-control" />
+            <input type='text' name='abv' className="form-control" required/>
           </div>
           <div className="form-group">
             <label htmlFor="img">Image URL: </label>
